@@ -1,0 +1,13 @@
+var newButton = document.createElement('button');
+newButton.id = 'draw-fortune-js';
+newButton.textContent = 'Rút Lì Xì';
+document.body.appendChild(newButton);
+ 
+
+
+document.getElementById("draw-fortune-js").addEventListener("click", displayDate);
+var divs = document.querySelectorAll('.answer .img');
+function displayDate() {
+  var randomIndex = Math.floor(Math.random() * divs.length);
+  divs[randomIndex].click();
+}
